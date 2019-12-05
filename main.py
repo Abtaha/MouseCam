@@ -14,9 +14,6 @@ cam_height = cap.get(4)
 width, height = pyautogui.size()
 
 
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
-
 
 # Mapping camera position to screen position and moving mouse
 def moveMouse(x, y):
@@ -52,5 +49,4 @@ while(True):
 
 # Exit Cleanly
 cap.release()
-out.release()
 cv2.destroyAllWindows()
